@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>冰岛数据故事</title>
+
+    <!--导入在线js库文件-->
+    <script type="text/javascript" src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+            crossorigin="anonymous"
+    />
+
+    <link
+            href="http://getbootstrap.com/docs/3.4/examples/jumbotron-narrow/jumbotron-narrow.css"
+            rel="stylesheet"
+    />
+    <link href="../static/css/signup.css" rel="stylesheet"/>
+
+
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+        <nav>
+            <ul class="nav nav-pills justify-content-end">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">第一页面</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/page_second">第二页面</a>
+                </li>
+                <li rclass="nav-item">
+                    <a class="nav-link active" href="/page_third">第三页面</a>
+                </li>
+                <li rclass="nav-item">
+                    <a class="nav-link" href="/page_final">最后页面</a>
+                </li>
+            </ul>
+        </nav>
+        <h3 class="text-muted">冰岛女性社会地位</h3>
+    </div>
+
+    <div>
+        <h4 class="text-muted"></h4>
+        <p>
+            根据2018年世界经济论坛发布《2018年全球性别差距报告》中，消除逾85.8%性别差距的冰岛稳居全球性别差距指数榜首，连续十年成为全球性别最平等的国家。自2006年以来，冰岛在缩小性别差距方面的表现一直遥遥领先。</p>
+    </div>
+
+    <div>
+        <h5 class="text-muted"></h5>
+        <p>数据来源-世界银行一是冰岛国家会议中妇女参与的比例数据，二是冰岛女性就业情况数据来</p>
+        <div class="" style="padding: 5px;">
+            <table class="table table-bordered">
+                <tr>
+                    {% for header in context.header_list %}
+                    <th>{{ header}}</th>
+                    {% endfor %}
+                </tr>
+                {% for contents in context.contents_list %}
+                <tr>
+                    {% for content in contents %}
+                    <td>{{content}}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+        <div class='content'>
+            <div class='graph'>
+                <!--展现可视化图标部分-->
+                <h1> {{context.graph |safe }} </h1>
+            </div>
+        </div>
+        <p>从2001年开始，冰岛女性参与国会人数占比逐渐增加，到2018年时，可以看到将近有超过半数的女士可以参与到国家会议中</p>
+    </div>
+    <div>
+        <h5 class="text-muted"></h5>
+        <P>全球各国女性就业率---数据来源世界银行中的世界发展指标数据库</P>
+        <div class="jumbotron" style="padding: 10px;">
+            <table class="table table-bordered">
+                <tr>
+                    {% for header in context.header_list2 %}
+                    <th>{{ header}}</th>
+                    {% endfor %}
+                </tr>
+                {% for contents in context.contents_list2 %}
+                <tr>
+                    {% for content in contents %}
+                    <td>{{content}}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+        <div class='content'>
+            <div class='graph'>
+                {{context.map|safe}}
+            </div>
+        </div>
+        <p>从这图中可以看到全球女性就业比率大体呈上升趋势发展</p>
+    </div>
+    <div>
+        <h5 class="text-muted"></h5>
+        <div class="jumbotron" style="padding: 10px;">
+            <table class="table table-bordered">
+                <tr>
+                    {% for header in context.header_list3 %}
+                    <th>{{ header}}</th>
+                    {% endfor %}
+                </tr>
+                {% for contents in context.contents_list3 %}
+                <tr>
+                    {% for content in contents %}
+                    <td>{{content}}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+        <div class='content'>
+            <div class='graph'>
+                {{context.bar|safe}}
+            </div>
+        </div>
+        <p>从这图可以看到其中冰岛女性就业率遥遥领先于其他国家，说明在将近半年的时间里，在冰岛有超过70%的女性能够拥有自己的工作。超过半数的冰岛女性能够参与会议，能够在经济发展与政治中起到作用，可见冰岛女性社会地位之高。</p>
+    </div>
+
+
+    <footer class="footer">
+        <p>&copy; Company 2020</p>
+    </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>冰岛数据故事</title>
+    <style type="text/css">
+    	div.content {padding: 1em 5em;}
+    	div.graph {margin: 10px auto;
+    		       width: 70%;}
+
+
+
+
+
+    </style>
+    <!--导入在线js库文件-->
+    <script type="text/javascript" src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+            crossorigin="anonymous"
+    />
+
+    <link
+            href="http://getbootstrap.com/docs/3.4/examples/jumbotron-narrow/jumbotron-narrow.css"
+            rel="stylesheet"
+    />
+    <link href="../static/css/signup.css" rel="stylesheet"/>
+
+
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+        <nav>
+            <ul class="nav nav-pills justify-content-end">
+                <li class="nav-item">
+                    <a class="nav-link active" href="/">第一页面</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/page_second">第二页面</a>
+                </li>
+                <li rclass="nav-item">
+                    <a class="nav-link" href="/page_third">第三页面</a>
+                </li>
+                <li rclass="nav-item">
+                    <a class="nav-link" href="/page_final">最后页面</a>
+                </li>
+            </ul>
+        </nav>
+        <h3 class="text-muted">冰岛数据故事</h3>
+    </div>
+
+    <div>
+        <h4 class="text-muted"></h4>
+        <p>
+            冰岛位于地球北极圈边缘，凭借独特地理位置和与众不同的景致，冰岛也造就了自己独特的风土人情和生活文化并被外界人所追求。根据报道，在将近六年的时间里，冰岛成为了世界上性别平等程度最高的国家，然而在这个现实主义下的“乌托邦式”的国家中生活着的冰岛人对待婚姻又抱以怎样的态度呢？接下来让我们通过几项数据来了解一下吧</p>
+    </div>
+
+    <div>
+        <h5 class="text-muted"></h5>
+        <p>第一项数据来源：世界银行-世界发展指标数据库</p>
+        <p>数据名称：2017年冰岛0-65岁，及65岁以上人口总数及女性人口总数</p>
+        <div class='content'>
+            <div class='graph'>
+                <!--展现可视化图标部分-->
+                <h1> {{context.graph |safe }} </h1>
+            </div>
+        </div>
+    </div>
+    <div>
+        <h5 class="text-muted"></h5>
+        <p>第二项数据来源：OECD Family Database</p>
+        <p>数据名称：0-5岁儿童的家庭成员情况（冰岛）</p>
+        <div class='content'>
+            <div class='graph'>
+                <!--展现可视化图标部分-->
+                <h1> {{context.graph2 |safe }} </h1>
+            </div>
+        </div>
+
+    </div>
+    <div>
+        <h4 class="text-muted"></h4>
+        <p>
+            根据第一、二项数据显示，冰岛新生儿有超过三分之二是来自未婚女性，某种程度来说冰岛有超过70%的双亲没有缔结婚姻。这在许多国家是羞耻且有违伦理的事情，包括在我国，“先上车后补票“势必遭致舆论挞伐，更何况是“上了车不补票“？不过在冰岛，似乎并不这样...
+        </p>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; Company 2020</p>
+    </footer>
+</div>
+</body>
+</html>

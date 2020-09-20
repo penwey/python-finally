@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>冰岛数据故事</title>
+
+    <!--导入在线js库文件-->
+    <script type="text/javascript" src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+            crossorigin="anonymous"
+    />
+
+    <link
+            href="http://getbootstrap.com/docs/3.4/examples/jumbotron-narrow/jumbotron-narrow.css"
+            rel="stylesheet"
+    />
+    <link href="../static/css/signup.css" rel="stylesheet"/>
+
+
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+        <nav>
+            <ul class="nav nav-pills justify-content-end">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">第一页面</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="/page_second">第二页面</a>
+                </li>
+                <li rclass="nav-item">
+                    <a class="nav-link" href="/page_third">第三页面</a>
+                </li>
+                <li rclass="nav-item">
+                    <a class="nav-link" href="/page_final">最后页面</a>
+                </li>
+            </ul>
+        </nav>
+        <h3 class="text-muted">冰岛数据故事</h3>
+    </div>
+
+    <div>
+        <h4 class="text-muted">冰岛高生育率和高离婚率</h4>
+        <p>
+    </div>
+
+    <div>
+        <h5 class="text-muted"></h5>
+        <p>数据来源：世界银行-世界发展指标-冰岛及其他国家总离婚率数据和总生育率数据</p>
+        <div class="" style="padding: 5px;">
+            <table class="table table-bordered">
+                <tr>
+                    {% for header in context.header_list %}
+                    <th>{{ header}}</th>
+                    {% endfor %}
+                </tr>
+                {% for contents in context.contents_list %}
+                <tr>
+                    {% for content in contents %}
+                    <td>{{content}}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+        <div class='content'>
+            <div class='graph'>
+                <!--展现可视化图标部分-->
+                <h1> {{context.graph |safe }} </h1>
+            </div>
+        </div>
+        <p>数据说明-冰岛的离婚率总体高于北欧其他国家平均水平，在2018年离婚率达到53%</p>
+    </div>
+    <div>
+        <h5 class="text-muted"></h5>
+        <div class="jumbotron" style="padding: 10px;">
+            <table class="table table-bordered">
+                <tr>
+                    {% for header in context.header_list2 %}
+                    <th>{{ header}}</th>
+                    {% endfor %}
+                </tr>
+                {% for contents in context.contents_list2 %}
+                <tr>
+                    {% for content in contents %}
+                    <td>{{content}}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+        <div class='content'>
+            <div class='graph'>
+                <!--展现可视化图标部分-->
+                <h1> {{context.graph2 |safe }} </h1>
+            </div>
+        </div>
+        <p>数据说明-冰岛生育率从2010年起，呈缓步下降趋势，但总体高于大部分国家，尤其是北欧国家水平</p>
+    </div>
+    <div>
+        <h4 class="text-muted"></h4>
+        <p>
+            冰岛拥有高于大部分国家水平的高离婚率和高生育率，也造就了单亲家庭“风潮”的盛行，单身妈妈比例逐渐上升也是冰岛前卫社会文化的一个重要体现 </p>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; Company 2020</p>
+    </footer>
+</div>
+</body>
+</html>
