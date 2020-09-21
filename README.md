@@ -1,5 +1,5 @@
 # python-finally
-# Project：
+# Project description：
 Python website based on Flask
 # Demo url:
 http://penwey.pythonanywhere.com/
@@ -10,6 +10,16 @@ flask
 werkzeug
 plotly
 pyecharts
+# Project construction
+data: website data
+statisc: html java script and css script
+templates: html page
+main.html: 网站第一页面的内容
+second.html: 网站第二页面的内容
+third.html: 网站第三页面的内容
+final.html: 网站最后页面的内容
+app.py: flask的入口程序文件
+requirement.txt：本项目所需要的python模块，可以一键安装
 # About python numpy
 python中用列表保存一组值，可将列表当数组使用。另外，python中有array模块，但它不支持多维数组，无论是时列表还是array模块都没有科学运算函数，不适合做矩阵等科学计算。numpy没有使用python本身的数组机制，而是提供了ndarray对象，该对象不仅能方便地存取数组，而且拥有丰富的数组计算函数。
 # About python pandas
